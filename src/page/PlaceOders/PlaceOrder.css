@@ -1,0 +1,126 @@
+/* ---- MAIN CONTAINER ---- */
+.place-order {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 1200px;
+}
+
+/* ---- LEFT SECTION (DELIVERY INFO) ---- */
+.place-order-left {
+    width: 100%;
+    max-width: 550px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title */
+.place-order-left .title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Input Fields */
+.place-order-left input, 
+.place-order-left select {
+    width: 100%;
+    padding: 14px;  
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 15px; 
+}
+
+/* Specific Margins for Email, House, Street */
+.place-order-left input[type="email"] {
+    margin-bottom: 20px;
+}
+
+.place-order-left input[name="house"] {
+    margin-bottom: 20px;
+}
+
+.place-order-left input[name="street"] {
+    margin-bottom: 25px;
+}
+
+/* Input Focus Effect */
+.place-order-left input:focus, 
+.place-order-left select:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.3);
+}
+
+/* Multi-fields (Two inputs in one row) */
+.multi-fields {
+    display: flex;
+    gap: 15px;
+}
+
+.multi-fields input, 
+.multi-fields select {
+    flex: 1;
+}
+
+/* ---- RIGHT SECTION (CART TOTAL) ---- */
+.place-order-right {
+    width: 100%;
+    max-width: 350px;
+}
+
+.cart-total {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-total h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.cart-total button {
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background: tomato;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cart-total button:hover {
+    background: #218838;
+}
+
+/* ---- RESPONSIVE DESIGN ---- */
+@media (max-width: 900px) {
+    .place-order {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .place-order-left, .place-order-right {
+        max-width: 100%;
+    }
+}

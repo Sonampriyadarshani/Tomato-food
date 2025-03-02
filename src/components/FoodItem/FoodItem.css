@@ -1,0 +1,121 @@
+.food-display {
+    width: 100%;
+    padding: 20px;
+}
+
+.food-display h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* ✅ Display all food items in a row */
+.food-display-list {
+    display: flex;  /* ✅ Arrange items in a row */
+    gap: 20px;  /* ✅ Adds space between items */
+    overflow-x: auto; /* ✅ Enables horizontal scrolling if needed */
+    white-space: nowrap;
+    padding-bottom: 10px;
+}
+
+/* ✅ Ensures each food item has a fixed width */
+.food-item {
+    flex: 0 0 auto; /* ✅ Keeps items in a row without wrapping */
+    width: 220px;  
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.food-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Image Styling */
+.food-item-img-container {
+    width: 100%;
+    height: 160px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.food-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.food-item-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+}
+.add-to-cart-container {
+    width: 100px;
+    height: 35px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: tomato;
+}
+
+/* ✅ "Add" Button (Initially Shown) */
+.add-btn {
+    width: 100%;
+    height: 100%;
+    
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+    background-color: darkred;
+}
+
+/* ✅ Counter Buttons (After Clicking "Add") */
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid tomato;
+}
+
+.counter-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
+}
+
+.counter-btn:hover {
+    transform: scale(1.1);
+}
+
+/* ✅ Animates Button Expanding */
+.add-to-cart-container.active {
+    width: 120px;
+    background-color: white;
+    border: 1px solid tomato;
+}
