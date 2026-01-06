@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import "./PlaceOrder.css";
-import { StoreContext } from "../../context/Storecontext";
+import { StoreContext } from "../../context/StoreContext";
 
 const statesWithCities = {
   "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur", "Nellore"],
